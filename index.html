@@ -25,7 +25,7 @@
 
       <h2>California COVID-19 Cases</h2>
 
-      <p>Source: <a href='https://healthdata.gov/dataset/california-covid-19-hospital-data-and-case-statistics'>healthdata.gov</a></p>
+      <p>Source: <a href='https://healthdata.gov/dataset/california-covid-19-hospital-data-and-case-statistics'>healthdata.gov</a> |  Last updated on <script> document.write(new Date().toLocaleDateString()); </script></p>
 
       <div id='table-container'></div>
 
@@ -52,11 +52,11 @@
       }
 
       CsvToHtmlTable.init({
-        csv_path: 'data/covid-19-cases.csv',
+        csv_path: 'data/covid19data-4-14.csv',
         element: 'table-container', 
         allow_download: true,
         csv_options: {separator: ',', delimiter: '"'},
-        datatables_options: {"paging": false},
+        datatables_options: {"paging": false, "order": [ 1, 'desc' ]},
         custom_formatting: [[4, format_link]]
       });
     </script>
