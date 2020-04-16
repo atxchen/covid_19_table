@@ -52,12 +52,14 @@
       }
 
       CsvToHtmlTable.init({
-        csv_path: 'data/covid19data-4-14.csv',
+        csv_path: 'data/covid19data-4-16.csv',
         element: 'table-container', 
         allow_download: true,
         csv_options: {separator: ',', delimiter: '"'},
-        datatables_options: {"paging": false, "order": [ 1, 'desc' ]},
+        datatables_options: {"paging": false, "order": [ 1, 'desc' ], "paging": true, "lengthMenu":[15,50,100,"All"]},
       });
     </script>
+
   </body>
+
 </html>
